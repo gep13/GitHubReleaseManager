@@ -39,7 +39,7 @@ namespace GitReleaseManager.IntegrationTests
             _logger = new LoggerConfiguration().WriteTo.Console().CreateLogger();
             Log.Logger = _logger;
 
-            _token = Environment.GetEnvironmentVariable("GITHUB_TOKEN");
+            _token = Environment.GetEnvironmentVariable("GITTOOLS_GITHUB_TOKEN");
             if (string.IsNullOrWhiteSpace(_token))
             {
                 Assert.Inconclusive("Unable to locate credentials for accessing GitHub API");
